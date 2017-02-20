@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="#cccccc"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/image"
+        android:text="书名"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/image"
+        android:text="作者"
+        android:textColor="@color/grey_black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/author"
+        android:text="|"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/grey_black" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/author"
+        android:text="类型"
+        android:textColor="@color/grey_black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/author"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/image"
+        android:maxLines="2"
+        android:text="描述"
+        android:textColor="@color/grey_black"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_below="@id/image"
+        android:layout_marginTop="10dp"
+        android:background="@color/Gray"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+</RelativeLayout>

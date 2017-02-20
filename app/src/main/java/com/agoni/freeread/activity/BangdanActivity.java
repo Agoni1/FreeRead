@@ -40,8 +40,13 @@ public class BangdanActivity extends SwipeBackActivity {
 
     private void iniviewPager() {
         final List<Fragment> fragments=new ArrayList<>();
-        fragments.add(new NanbangFragment());
-        fragments.add(new NvbangFragment());
+        int num = getIntent().getIntExtra("num", 0);
+        NanbangFragment nanbangFragment = new NanbangFragment();
+        nanbangFragment.setData(nanbangid[num]);
+        NvbangFragment nvbangFragment = new NvbangFragment();
+        nvbangFragment.setData(nvbangid[num]);
+        fragments.add(nanbangFragment);
+        fragments.add(nvbangFragment);
 
         final String[] titles=new String[]{"男生","女生"};
 
