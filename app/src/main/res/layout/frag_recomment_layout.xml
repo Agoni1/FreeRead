@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/grey_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/viewpager_in_recommentfragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp">-->
+        <!--</android.support.v4.view.ViewPager>-->
+
+        <ImageView
+            android:background="@drawable/p1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:background="@color/White"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:background="@drawable/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="玄幻"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:drawableRight="@drawable/more"
+                android:text="更多"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/grey_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
