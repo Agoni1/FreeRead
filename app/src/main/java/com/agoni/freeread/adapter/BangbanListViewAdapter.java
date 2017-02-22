@@ -2,7 +2,6 @@ package com.agoni.freeread.adapter;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -35,7 +34,7 @@ public class BangbanListViewAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return bookList.get(i);
     }
 
     @Override
@@ -60,7 +59,6 @@ public class BangbanListViewAdapter extends BaseAdapter {
         }
         Book book = bookList.get(i);
         Picasso.with(context).load("http://statics.zhuishushenqi.com"+book.cover).resize(90,120).into(holder.image);
-        Log.d("tag",book.cover);
         holder.name.setText(book.title);
         holder.author.setText(book.author);
         holder.type.setText(book.cat);

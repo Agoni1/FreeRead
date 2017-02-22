@@ -1,5 +1,6 @@
 package com.agoni.freeread.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -8,10 +9,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.agoni.freeread.R;
+import com.agoni.freeread.activity.BookDetailActivity;
 import com.agoni.freeread.adapter.BangbanListViewAdapter;
 import com.agoni.freeread.bean.Book;
 import com.google.gson.Gson;
@@ -56,8 +59,8 @@ public class NanbangFragment extends Fragment {
     }
 
     public void findView(View view) {
-        listView= (ListView) view.findViewById(R.id.listview);
         loading= (TextView) view.findViewById(R.id.loading);
+        listView= (ListView) view.findViewById(R.id.listview);
     }
 
     public void requestData(final String strUrl) {
@@ -104,8 +107,17 @@ public class NanbangFragment extends Fragment {
     }
 
     private void initListView(List<Book> bookList) {
-        BangbanListViewAdapter adapter = new BangbanListViewAdapter(getActivity(), bookList);
+        final BangbanListViewAdapter adapter = new BangbanListViewAdapter(getActivity(), bookList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Book book= (Book) adapterView.getAdapter().getItem(i);
+                Intent intent = new Intent(getActivity(), BookDetailActivity.class);
+                intent.putExtra("id",book._id);
+                startActivity(intent);
+            }
+        });
     }
 
     public void setData(String id) {
